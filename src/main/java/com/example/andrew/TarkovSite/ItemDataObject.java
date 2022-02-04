@@ -1,47 +1,63 @@
-// package com.example.andrew.TarkovSite;
+ package com.example.andrew.TarkovSite;
 
-// public class ItemDataObject {
-//     private String itemName;
-//     private String fleaPrice;
-//     private String traderPrice;
-//     private String imgUrl;
-//     private boolean hasQuest;
-//     private boolean hasHideout;
-//     private String questName;
-//     private String hideoutName;
+ import java.util.List;
 
-//     public ItemDataObject(String itemName, String fleaPrice, String traderPrice, String imgUrl, boolean hasQuest, boolean hasHideout, String questName, String hideoutName) {
-//         this.itemName = itemName;
-//         this.fleaPrice = fleaPrice;
-//         this.traderPrice = traderPrice;
-//         this.imgUrl = imgUrl;
-//         this.hasQuest = hasQuest;
-//         this.hasHideout = hasHideout;
-//         this.questName = questName;
-//         this.hideoutName = hideoutName;
-//     }
+ public class ItemDataObject {
+     private String itemName;
+     private String itemNickname;
+     private String fleaPrice;
+     private String traderPrice;
+     private String imgUrl;
+     private boolean hasQuest;
+     private boolean hasHideout;
+     private List<String> questName;
+     private List<String> hideoutName;
 
-//     public String getFleaPrice() {
-//         return fleaPrice;
-//     }
+     public ItemDataObject(String itemName, String itemNickname, String fleaPrice, String traderPrice, String imgUrl, boolean hasQuest, boolean hasHideout, List<String> questName, List<String> hideoutName) {
+         this.itemName = itemName;
+         this.itemNickname = itemNickname;
+         this.fleaPrice = fleaPrice;
+         this.traderPrice = traderPrice;
+         this.imgUrl = imgUrl;
+         this.hasQuest = hasQuest;
+         this.hasHideout = hasHideout;
+         this.questName = questName;
+         this.hideoutName = hideoutName;
+     }
 
-//     public String getHideoutName() {
-//         return hideoutName;
-//     }
+     public String getItemNickname() {
+         return itemNickname;
+     }
 
-//     public String getImgUrl() {
-//         return imgUrl;
-//     }
+     public String getFleaPrice() {
+         return fleaPrice;
+     }
 
-//     public String getItemName() {
-//         return itemName;
-//     }
+     public List<String> getHideoutName() {
+         return hideoutName;
+     }
 
-//     public String getQuestName() {
-//         return questName;
-//     }
+     public String getImgUrl() {
+         return imgUrl;
+     }
 
-//     public String getTraderPrice() {
-//         return traderPrice;
-//     }
-// }
+     public String getItemName() {
+         return itemName;
+     }
+
+     public List<String> getQuestName() {
+         return questName;
+     }
+
+     public String getTraderPrice() {
+         return traderPrice;
+     }
+
+     public boolean getHasHideout() {
+         return hasHideout;
+     }
+
+     public boolean getHasQuest() {
+         return hasQuest;
+     }
+ }

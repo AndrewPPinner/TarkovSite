@@ -20,14 +20,24 @@
                   </datalist>
               <button style="margin-top: .5rem;" class="btn btn-success" @click="getItemInfo(item, itemObject)">Search</button>
             </div>
-            <div v-if='show' class="card text-white bg-secondary mb-3" style="width: 18rem; margin-top: .5rem;">
-                <img class="card-img-top" v-bind:src=imgURL style="height: 100px; width: 100px;">
+            <div v-show='isLoading' class="spinner-border" role="status" style="margin-top: 20px">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div v-show='show' class="card text-white bg-secondary mb-3" style="width: 18rem; margin-top: .5rem;">
+                <img class="card-img-top" v-bind:src=imgURL style="width: 100px; height: 175px">
                 <div class="card-body">
                   <h5 class="card-title">{{ itemName }}</h5>
+                    <cite>{{ itemNickname }}</cite>
                 </div>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">{{'Price to traders: ' + traderPrice }}</li>
                   <li class="list-group-item">{{'Current price on flea: ' + fleaPrice }}</li>
+                </ul>
+                <ul v-if="hasQuest"  class="list-group list-group-flush">
+                    <li v-for="quest in questName" class="list-group-item"> {{ 'Required for Quest: ' + quest }}</li>
+                </ul>
+                <ul v-if="hasHideout" class="list-group list-group-flush">
+                    <li v-for="hideout in hideoutName" class="list-group-item"> {{ 'Required for Hideout: ' + hideout }}</li>
                 </ul>
               </div>
         </div>
