@@ -33,10 +33,10 @@
                   <li class="list-group-item">{{'Price to traders: ' + traderPrice }}</li>
                   <li class="list-group-item">{{'Current price on flea: ' + fleaPrice }}</li>
                 </ul>
-                <ul v-if="hasQuest"  class="list-group list-group-flush">
+                <ul class="list-group list-group-flush">
                     <li v-for="quest in questName" class="list-group-item"> {{ 'Required for Quest: ' + quest }}</li>
                 </ul>
-                <ul v-if="hasHideout" class="list-group list-group-flush">
+                <ul class="list-group list-group-flush">
                     <li v-for="hideout in hideoutName" class="list-group-item"> {{ 'Required for Hideout: ' + hideout }}</li>
                 </ul>
               </div>

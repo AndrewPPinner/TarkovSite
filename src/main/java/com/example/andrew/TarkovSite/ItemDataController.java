@@ -31,7 +31,8 @@
              Browser browser = playwright.chromium().launch();
              Page page = browser.newPage();
              page.navigate(url);
-             page.waitForSelector(".price-wrapper");
+             page.waitForSelector(".quest-name-wrapper");
+             page.mouse().wheel(0,100);
              itemName = page.locator(".item-image").first().getAttribute("alt");
              itemNickname = page.locator(".item-information-wrapper").locator("cite").textContent();
              fleaPrice = page.locator(".flea-wrapper ").textContent();
