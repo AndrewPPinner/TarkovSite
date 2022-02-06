@@ -23,7 +23,7 @@ const app = Vue.createApp({
         this.isLoading = true;
             url = itemObject[item];
             axios
-            .get("https://gpubots.asuscomm.com/tarkov/item/value?link=" + url)
+            .get("https://andrew-pinner.asuscomm.com/tarkov/item/value?link=" + url)
             .then(res => (this.hasHideout = res.data.hasHideout, this.hasQuest = res.data.hasQuest, this.isLoading = false, this.itemNickname = res.data.itemNickname, this.hideoutName = res.data.hideoutName, this.questName = res.data.questName, this.show = true, this.itemName = res.data.itemName, this.fleaPrice = res.data.fleaPrice, this.traderPrice = res.data.traderPrice, this.imgURL = res.data.imgUrl))
             .catch(ee =>(console.log(ee)))
         }
