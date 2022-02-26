@@ -12,6 +12,14 @@
     </head>
     <body class="p-3 mb-2 bg-dark text-white">
         <div id="app">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://andrew-pinner.asuscomm.com/tarkov/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://andrew-pinner.asuscomm.com/tarkov/maps">Maps</a>
+                </li>
+            </ul>
             <h1>Escape From Tarkov</h1>
             <div>
                 <input v-model='item' class="form-control" list="datalistOptions" id="exampleDataList"  @keyup.enter='getItemInfo(item, itemObject)' placeholder="Search Items" style="max-width:38%;">
