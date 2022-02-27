@@ -9,7 +9,7 @@ public class MapsPage {
 
 
 
-    @RequestMapping
+    @RequestMapping("/maps")
     public String getMaps(){
         return "maps.html";
     }
